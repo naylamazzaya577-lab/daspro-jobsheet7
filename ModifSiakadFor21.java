@@ -8,6 +8,8 @@ public class SiakadFor21 {
         double nilai;
         double niting = 0 ;
         double nindah = 100;
+        int lulus = 0 ;
+        int tidakLulus = 0 ;
         for (int i = 1; i <=10; i++){
             System.out.print( "Masukkan nilai Mahasiswa ke- " + i + " : ");
             nilai = sc.nextDouble();
@@ -17,9 +19,15 @@ public class SiakadFor21 {
             if (nilai < nindah) {
                 nindah = nilai;
             }  
-        }
-
+            if (nilai >= 60) {
+                lulus++;
+            } else {
+                tidakLulus++;
+             }
+    }
             System.out.println("Nilai Tertinggi "+ niting);
             System.out.println("Nilai Terendah "+ nindah );
-    }
+            System.out.println("Mahasiswa yang Lulus " + lulus);
+            System.out.println("Mahasiswa yang Tidak lulus " +tidakLulus);
+}
 }
